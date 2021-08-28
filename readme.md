@@ -1,4 +1,4 @@
-# INTRODUCTION
+# Introduction
 <br>
 
 This is just a collection of ducky scripts for ATTiny85 (aka the poor man's rubberducky, which I got just for under $4) I made. These can be easily converted to ducky script so if you wanna use them in your hak5 rubber ducky, go for it
@@ -9,7 +9,7 @@ This is just a collection of ducky scripts for ATTiny85 (aka the poor man's rubb
 
 <br>
 
-# PROGRAMS
+# Programs
 
 ## Rickroll
 <br>
