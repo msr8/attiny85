@@ -7,6 +7,7 @@ void loop()
 {
   // Initialise digispark
   DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(600);
 
   // Hits cmd+space to open spotlight
   DigiKeyboard.sendKeyStroke( KEY_SPACE,MOD_GUI_LEFT );
@@ -14,6 +15,7 @@ void loop()
 
   // Enters the rickroll link and presses enter
   DigiKeyboard.print("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+  DigiKeyboard.delay(3000);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
   for (;;) {/* Stops the loop */}
