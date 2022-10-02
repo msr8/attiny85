@@ -1,1 +1,1 @@
-say "You have been hacked. Please wave for the audience"
+say "You have been hacked. Please wave for the camera"
