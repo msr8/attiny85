@@ -1,2 +1,2 @@
-sleep 10
+sleep 3
 say "lol"
