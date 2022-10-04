@@ -12,7 +12,7 @@ public class wpchange {
 }
 '@
 
-New-Object System.Net.WebClient.DownloadFile("https://raw.githubusercontent.com/msr8/attiny85/main/Assets/cat6.jpg", "$env:TEMPDIR\test.jpg")
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/msr8/attiny85/main/Assets/cat6.jpg -OutFile "$env:TEMP\test.jpg"
 
 [wpchange]::SetWallpaper("$env:TEMPDIR\test.jpg")
 
