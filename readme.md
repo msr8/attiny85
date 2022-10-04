@@ -5,17 +5,17 @@ This is just a collection of payloads for ATTiny85 (aka the poor man's rubberduc
 
 <br>
 
-**NOTE: The creator is NOT responsible for whatever you do. These codes are made and published for educational purposes ONLY! (or to troll your friends IF you have their permission lol)**
+**NOTE: The creator is NOT responsible for whatever you do. These codes are made and published just as a proof of concept**
 
 <br>
 
 # Payloads
 
-This is just a description of what each payloads does. More information and a line by line explanation can be found in the [Payloads](https://github.com/msr8/attiny85/tree/main/Payloads) folder
+This is just a description of what each payloads does. More information and a line by line explanation can be found in their respective folders under the [Payloads](https://github.com/msr8/attiny85/tree/main/Payloads) folder
 
 <br>
 
-**RickRoll:** Opens up the [rickroll video](https://www.youtube.com/watch?v=dQw4w9WgXcQ) on youtube
+**[Win/Mac] RickRoll:** Opens up the [rickroll video](https://www.youtube.com/watch?v=dQw4w9WgXcQ) on youtube
 
-**Script Runner:** Runs any powershell/bash script on the user's computer. By default it is set to run speak.[ps1](https://github.com/msr8/attiny85/blob/main/Shell%20Scripts/powershell/speak.ps1)/[sh](https://github.com/msr8/attiny85/blob/main/Shell%20Scripts/bash/speak.sh)
+**[Win/Mac] Script Runner:** Runs any powershell/bash script on the user's computer. By default it is set to run speak.[ps1](https://github.com/msr8/attiny85/blob/main/Shell%20Scripts/powershell/speak.ps1)/[sh](https://github.com/msr8/attiny85/blob/main/Shell%20Scripts/bash/speak.sh)
 
