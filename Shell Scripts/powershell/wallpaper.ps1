@@ -12,7 +12,15 @@ public class wpchange {
 }
 '@
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/msr8/attiny85/main/Assets/cat6.jpg -OutFile "$env:TEMP\test.jpg"
-
+# Downloads the wallpaper
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/msr8/attiny85/main/Assets/cat6.jpg -OutFile $env:TEMP\15791817.jpg
+# Changes it
 [wpchange]::SetWallpaper("$env:TEMP\test.jpg")
+# Deletes it
+rm $env:TEMP\15791817.jpg
+
+# Hides the desktop icons, https://superuser.com/questions/1368139/disable-show-desktop-icons-in-windows-with-powershell
+$Path="HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+Set-ItemProperty -Path $Path -Name "HideIcons" -Value 1
+Get-Process "explorer"| Stop-Process
 
