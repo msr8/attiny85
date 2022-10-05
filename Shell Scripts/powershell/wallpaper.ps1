@@ -12,8 +12,10 @@ public class wpchange {
 }
 '@
 
-# Downloads the wallpaper
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/msr8/attiny85/main/Assets/cat6.jpg -OutFile $env:TEMP\15791817.jpg
+# Gets a random number between 1 and 6
+$fn = Get-Random -Minimum 1 -Maximum 6
+# Downloads a random cat wallpaper from the Assets folder wallpaper
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/msr8/attiny85/main/Assets/cat$fn.jpg -OutFile $env:TEMP\15791817.jpg
 # Changes it
 [wpchange]::SetWallpaper("$env:TEMP\test.jpg")
 # Deletes it
