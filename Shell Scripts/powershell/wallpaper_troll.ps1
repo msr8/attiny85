@@ -95,13 +95,13 @@ Remove-Item $ss_fp
 $Path="HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
 Set-ItemProperty -Path $Path -Name "HideIcons" -Value 1
 
-# Hides the taskbar
+# Hides the taskbar, https://stackoverflow.com/a/47202007/17002774
 $p='HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3'
 $v=(Get-ItemProperty -Path $p).Settings
 $v[8]=3
 Set-ItemProperty -Path $p -Name Settings -Value $v
 
-# Restarts the "explorer" process
+# Restarts the "explorer" process so that our changes take effect
 Get-Process "explorer"| Stop-Process
 
 
