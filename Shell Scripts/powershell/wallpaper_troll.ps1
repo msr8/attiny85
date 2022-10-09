@@ -88,12 +88,20 @@ screenshot $bounds $ss_fp
 Update-Wallpaper -Path $ss_fp -Style Stretch
 Update-Wallpaper -Path $ss_fp -Style Stretch
 
-# # Deletes it
-# Remove-Item $ss_fp
+# Deletes it
+Remove-Item $ss_fp
 
 # Hides the desktop icons, https://superuser.com/questions/1368139/disable-show-desktop-icons-in-windows-with-powershell
 $Path="HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
 Set-ItemProperty -Path $Path -Name "HideIcons" -Value 1
+
+# Hides the taskbar
+$p='HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3'
+$v=(Get-ItemProperty -Path $p).Settings
+$v[8]=3
+Set-ItemProperty -Path $p -Name Settings -Value $v
+
+# Restarts the "explorer" process
 Get-Process "explorer"| Stop-Process
 
 
