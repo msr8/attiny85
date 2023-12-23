@@ -14,5 +14,5 @@ $wshShell = New-Object -ComObject WScript.Shell
 (New-Object System.Media.SoundPlayer($FP)).PlaySync()
 
 # Delete the audio file
-# (https://www.easeus.com/computer-instruction/delete-file-powershell.html)
-Remove-Item -Path $FP
+# https://www.tutorialspoint.com/powershell/powershell_files_delete_files.htm
+Remove-Item $FP
