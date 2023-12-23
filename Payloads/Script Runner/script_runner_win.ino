@@ -7,7 +7,7 @@ void setup() {
 void loop() {
   // Put the URL of the malware/payload here
   char *URL = "https://raw.githubusercontent.com/msr8/attiny85/main/Shell%20Scripts/powershell/speak.ps1";
-  
+
   // Initialise digispark
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(600);
