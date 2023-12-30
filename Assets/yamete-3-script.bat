@@ -17,3 +17,5 @@ while ($true) {
 }
 "
 
+:: Print the contents of the variable
+echo %powershellScript% > "temp.ps1"
