@@ -6,8 +6,8 @@ $FP  = "$env:TEMP\15791817.wav"
 Invoke-WebRequest $URL -OutFile $FP
 
 # Change volume to full
-$wshShell = New-Object -ComObject WScript.Shell
-1..50 | ForEach-Object { $wshShell.SendKeys([char]175) }
+# $wshShell = New-Object -ComObject WScript.Shell
+# 1..50 | ForEach-Object { $wshShell.SendKeys([char]175) }
 
 # Play the audio file
 # https://stackoverflow.com/a/73538809/17002774
